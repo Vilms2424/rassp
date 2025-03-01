@@ -8,6 +8,10 @@ import datetime
 
 tp = telebot.TeleBot('8046394107:AAH0tVcJIBJMeTwku7wSV75LEdZtIWGyYmI');
 
+@tp.message_handler(commands=['start'])
+def start(message):
+    tp.send_message(message.chat.id, "Здарова брат! Выбери группу,выведу рассписание😊")
+
 #ОПРЕДЕЛЕНИЕ ДНЯ И КОЛ-ВО недели
 nows = datetime.datetime.now()
 today = datetime.date.today()
@@ -110,7 +114,6 @@ def handle_start(message):
     button2 = types.KeyboardButton('ИУК3-82Б')
     keyboard.add(button1, button2)
 
-    tp.reply_to(message,'Здарова брат! Выбери группу,выведу рассписание',reply_markup=keyboard)
 
 
 @tp.message_handler(func=lambda message: True)
