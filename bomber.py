@@ -1,9 +1,6 @@
 import telebot
-import sqlite3
 import types
 from telebot import types
-import psycopg2
-import json
 import datetime
 
 tp = telebot.TeleBot('8046394107:AAH0tVcJIBJMeTwku7wSV75LEdZtIWGyYmI');
