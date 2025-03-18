@@ -1,1 +1,1 @@
-worker: python bomber.py
+worker: python tok.py
