@@ -160,7 +160,7 @@ def iuk3():
         conn = psycopg2.connect(dbname="ryzhovvla2", user="ryzhovvla2", password="Vlad5253456", host="pg3.sweb.ru",
                                 port="5432")
         cur = conn.cursor()
-        cur.execute(f"SELECT \" {days}\" FROM tele LIMIT 1 OFFSET 1")
+        cur.execute(f"SELECT \"{days}\" FROM tele LIMIT 1 OFFSET 1")
         second = cur.fetchone()[0]
         print(second)
         tomor1 = second
